@@ -21,7 +21,7 @@ export const App: FC = () => {
       const usersFromApi = await getUsers('users');
       const sortedUsersByRegistration = [...usersFromApi]
         .sort((userA, userB) => (
-          userA.registration_timestamp - userB.registration_timestamp
+          userB.registration_timestamp - userA.registration_timestamp
         ));
 
       setUsers(sortedUsersByRegistration);
@@ -74,6 +74,7 @@ export const App: FC = () => {
         isForm={isForm}
         changeFormState={changeFormState}
         goTo={goTo}
+        handleUsersLoad={handleUsersLoad}
       />
     </div>
   );

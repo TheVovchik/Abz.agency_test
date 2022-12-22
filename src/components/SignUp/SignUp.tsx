@@ -12,12 +12,14 @@ type Props = {
   isForm: boolean,
   changeFormState: (state: boolean) => void,
   goTo: (id: string) => void,
+  handleUsersLoad: () => void,
 };
 
 export const SignUp: FC<Props> = ({
   isForm,
   changeFormState,
   goTo,
+  handleUsersLoad,
 }) => {
   const [errorMessage, setErrorMessage] = useState('');
   const [isSuccess, setIsSuccess] = useState(false);
@@ -52,7 +54,8 @@ export const SignUp: FC<Props> = ({
       setTimeout(() => {
         setIsSuccess(false);
         changeFormState(false);
-        goTo('home');
+        goTo('userSection');
+        handleUsersLoad();
       }, 2500);
     } catch (error) {
       const err = error as AxiosError;
