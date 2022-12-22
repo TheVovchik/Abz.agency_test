@@ -1,4 +1,3 @@
-# Getting Started with Create React App
+# Frontend Developer Test Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+[DEMO-LINK](https://thevovchik.github.io/Abz.agency_test/)
