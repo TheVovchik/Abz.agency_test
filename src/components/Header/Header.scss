@@ -1,0 +1,32 @@
+@import '../../style/mixins';
+@import '../../style/variables';
+
+.header {
+  padding: 13px 16px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablet {
+    padding: 13px 32px;
+  }
+
+  @include desktop {
+    padding: 13px 60px;
+  }
+
+  @include wideScreen {
+    padding: 13px 0;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__logo {
+    display: flex;
+  }
+}

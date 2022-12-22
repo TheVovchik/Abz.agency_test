@@ -1,0 +1,36 @@
+@import '../../style/mixins';
+@import '../../style/variables';
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  margin-bottom: 140px;
+  padding: 0 16px;
+  color: $white;
+  background-image: url('../../images/background_intro.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include desktop {
+    height: 650px;
+  }
+
+  &__title {
+    max-width: 380px;
+    padding-top: 40px;
+    margin: 0 auto 21px;
+    @include font_heading;
+  }
+
+  &__description {
+    max-width: 380px;
+    margin: 0 auto 32px;
+  }
+
+  &__button {
+    margin-bottom: 71px;
+  }
+}

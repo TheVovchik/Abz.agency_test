@@ -1,0 +1,53 @@
+@import '../../style/mixins';
+@import '../../style/variables';
+
+.users {
+  padding: 0 16px;
+  margin-bottom: 140px;
+
+  @include tablet {
+    padding: 0 32px;
+  }
+
+  @include desktop {
+    padding: 0 60px;
+  }
+
+  @include wideScreen {
+    padding: 0;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @include font_heading;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    margin: 0 auto 50px;
+
+    @include tablet {
+      width: 704px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: auto;
+    }
+
+    @include desktop {
+      width: 904px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: auto;
+      gap: 29px;
+    }
+
+    @include wideScreen {
+      width: 1170px;
+    }
+  }
+}

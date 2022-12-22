@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import './style/mixins';
+@import './style/variables';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1170px;
+  margin: 0 auto;
+  font-family: 'Nunito', sans-serif;
+  background-color: $background;
+
+  @include font_body;
+}
+
+button {
+  padding: 0;
+}
+
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+img {
+  margin: 0;
+}

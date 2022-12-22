@@ -1,0 +1,27 @@
+@import '../../style/variables';
+
+.tooltip {
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  width: max-content;
+
+  &__message {
+    visibility: hidden;
+    position: absolute;
+    top: 47px;
+    left: 0;
+    width: max-content;
+    padding: 3px 16px;
+    border-radius: 4px;
+
+    color: $white;
+
+    background-color: rgba(0, 0, 0, 0.87);
+
+  }
+
+  &:hover > .tooltip__message {
+    visibility: visible;
+  }
+}

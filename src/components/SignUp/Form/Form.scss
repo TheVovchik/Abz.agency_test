@@ -1,0 +1,68 @@
+@import '../../../style/mixins';
+@import '../../../style/variables';
+
+.form {
+  margin: 0 auto;
+  width: 328px;
+
+  @include tablet {
+    width: 380px;
+  }
+
+  &__radio {
+    text-align: left;
+    margin-bottom: 47px;
+
+    &-title {
+      margin-bottom: 11px;
+    }
+
+    &-input {
+      display: none;
+    }
+
+    &-label {
+      display: block;
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: 7px;
+      @include font_body;
+    }
+
+    &-label--unchecked {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        display: block;
+        width: 20px;
+        height: 20px;
+
+        background-image: url('../../../images/notSelected.svg');
+        background-repeat: no-repeat;
+      }
+    }
+
+    &-label--checked {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        display: block;
+        width: 20px;
+        height: 20px;
+
+        background-image: url('../../../images/selected.svg');
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &__error {
+    color: $error;
+  }
+}

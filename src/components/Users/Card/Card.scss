@@ -1,0 +1,34 @@
+@import '../../../style/variables';
+@import '../../../style/mixins';
+
+
+.card {
+  width: 328px;
+  padding: 20px;
+  background-color: $white;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include tablet {
+    width: 344px;
+  }
+
+  @include desktop {
+    width: 282px;
+  }
+
+  @include wideScreen {
+    width: 370px;
+  }
+
+  &__photo-box {
+    height: 70px;
+  }
+
+  &__photo {
+    border-radius: 50%;
+  }
+}

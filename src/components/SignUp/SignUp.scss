@@ -1,0 +1,20 @@
+@import '../../style/mixins';
+@import '../../style/variables';
+
+.sign-up {
+  padding: 0 16px;
+  margin-bottom: 100px;
+
+  @include tablet {
+    padding: 0 32px;
+  }
+
+  @include desktop {
+    padding: 0 60px;
+  }
+  &__title {
+    margin-bottom: 50px;
+
+    @include font_heading;
+  }
+}

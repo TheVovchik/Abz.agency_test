@@ -1,0 +1,32 @@
+@mixin font_heading {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+@mixin font_body {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@mixin font_error {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin wideScreen {
+  @media (min-width: 1170px) {
+    @content;
+  }
+}

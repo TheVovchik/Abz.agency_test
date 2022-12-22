@@ -1,0 +1,10 @@
+@import '../../../style/mixins';
+@import '../../../style/variables';
+
+.success {
+  margin: 0 auto 100px;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+}
